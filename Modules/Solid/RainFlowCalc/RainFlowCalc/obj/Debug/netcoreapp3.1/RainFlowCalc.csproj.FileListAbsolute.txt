@@ -1,0 +1,13 @@
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\bin\Debug\netcoreapp3.1\RainFlowCalc.exe
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\bin\Debug\netcoreapp3.1\RainFlowCalc.deps.json
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\bin\Debug\netcoreapp3.1\RainFlowCalc.runtimeconfig.json
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\bin\Debug\netcoreapp3.1\RainFlowCalc.runtimeconfig.dev.json
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\bin\Debug\netcoreapp3.1\RainFlowCalc.dll
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\bin\Debug\netcoreapp3.1\RainFlowCalc.pdb
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\obj\Debug\netcoreapp3.1\RainFlowCalc.csprojAssemblyReference.cache
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\obj\Debug\netcoreapp3.1\RainFlowCalc.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\obj\Debug\netcoreapp3.1\RainFlowCalc.AssemblyInfoInputs.cache
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\obj\Debug\netcoreapp3.1\RainFlowCalc.AssemblyInfo.cs
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\obj\Debug\netcoreapp3.1\RainFlowCalc.dll
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\obj\Debug\netcoreapp3.1\RainFlowCalc.pdb
+C:\Users\User\Documents\ProjectAPP\Modules\Solid\RainFlowCalc\RainFlowCalc\obj\Debug\netcoreapp3.1\RainFlowCalc.genruntimeconfig.cache
