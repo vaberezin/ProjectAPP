@@ -9,29 +9,33 @@ namespace RainFlowCalc
 {
     public class Parser
     {
-        string filePath = @"C:\Users\User\Documents\ProjectAPP\Unnecesary files\Tables\Table_gamma.txt"; //находим путь к файлу через диалоговое окно, например, впоследствии для версии PRO xD
+        static object locker = new object();
         List<string> keys4Dict = new List<string>();
         List<double> values4Dict = new List<double>();
-        internal async void parseCSV(string filePath, Dictionary<string, double> dictionary)
+        public async void parseCSV(string filePath, Dictionary<string, double> dictionary)
         {
-
-            string path = filePath;
+            lock (locker)
+            {
+                string path = filePath;
             FileInfo parseFile = new FileInfo(path);
-            if (parseFile.Extension == "txt")
+            if (parseFile.Extension == ".txt")
             {                
                 string keyPattern = @".*[^0123456789;,]";
-                string valuePattern = @"\d,\d*";
+                string valuePattern = @"[\d,\d* | ]"; //ИСПРАВИТЬ ЧТОБЫ БЫЛО ДЛЯ ВСЕХ ЧИСЕЛ х.хх х х.х 
                 List<string> fromFileList = new List<string>();
                 try
                 {
-                   using (StreamReader sr = new StreamReader(path, Encoding.Default))
+                   using (StreamReader sr = new StreamReader(path, Encoding.UTF8))
                 {
+                    System.Console.WriteLine("StreamReader запущен.");
                     string line = "";
                     List<string> tempList = new List<string>();
-                    while ((line = await sr.ReadLineAsync()) != null)
+                    //while ((line = await sr.ReadLineAsync()) != null)
+                    while ((line = sr.ReadLine()) != null)
                     {
                         tempList.Add(line);
                     }
+                    System.Console.WriteLine("Запись списка из файла окончена.");
                     fromFileList = tempList;
                 } 
                 }
@@ -58,8 +62,12 @@ namespace RainFlowCalc
                          
                     }
                 }
+                System.Console.WriteLine("Количество записей в списке полученном из файла -" + fromFileList);
+                System.Console.WriteLine("Количество записей в keys4Dict -" + keys4Dict.Count);
+                System.Console.WriteLine("Количество записей в values4Dict -" + values4Dict.Count);
 
-                for (int i = 0; i < keys4Dict.Count; i++ )
+                for (int i = 0; i < keys4Dict.Count; i++ ) //при условии что количество ключей равно колическтву значений
+
                 {
                     dictionary.Add(keys4Dict[i],values4Dict[i]);    
                 }
@@ -68,8 +76,12 @@ namespace RainFlowCalc
             else 
             {
                 System.Console.WriteLine("Метод не сработал.");
-            }            
+            }
+            }
+                        
         }          
         
     }
+        
+    
 }
