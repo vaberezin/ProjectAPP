@@ -21,8 +21,9 @@ namespace RainFlowCalc
             if (parseFile.Extension == ".txt")
             {                
                 string keyPattern = @".*[^0123456789;,]";
-                string valuePattern = @"[\d,\d* | ]"; //ИСПРАВИТЬ ЧТОБЫ БЫЛО ДЛЯ ВСЕХ ЧИСЕЛ х.хх х х.х 
-                List<string> fromFileList = new List<string>();
+                    string valuePattern = @"\d*?[,*?]\d*?\z";                                                  
+                    
+                    List<string> fromFileList = new List<string>();
                 try
                 {
                    using (StreamReader sr = new StreamReader(path, Encoding.UTF8))
@@ -57,10 +58,15 @@ namespace RainFlowCalc
                     foreach (Match match in values)
                     {
                          //System.Console.WriteLine(match.Value);
-                         IFormatProvider RUprovider = new NumberFormatInfo {NumberDecimalSeparator = ","};
-                         values4Dict.Add(Convert.ToDouble(match.Value.ToString(), RUprovider));
+                         //IFormatProvider RUprovider = new NumberFormatInfo {NumberDecimalSeparator = ","};
+                         //values4Dict.Add(Convert.ToDouble(match.Value.ToString(), RUprovider));
+                         values4Dict.Add(Convert.ToDouble(match.Value.ToString()));
                          
                     }
+                    foreach (double d in values4Dict)
+                        {
+                            Console.WriteLine(d);
+                        }    
                 }
                 System.Console.WriteLine("Количество записей в списке полученном из файла -" + fromFileList);
                 System.Console.WriteLine("Количество записей в keys4Dict -" + keys4Dict.Count);
