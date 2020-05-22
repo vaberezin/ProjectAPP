@@ -30,7 +30,66 @@ namespace RainFlowCalc
         double v_p; //ok
         double Q_rRain; //method
         double Q_rIce; //method
-        double beta; //table
+        double _beta; //вычисление происходит в методе double beta()
+        public void beta(double n)              //need to test
+        {
+            if(n <= 0.4)
+            {
+                _beta = 0.8;                
+            }
+            else if(n < 0.5)
+            {
+                _beta = 0.75;                
+            }
+            else if(n < 0.7)
+            {
+                _beta = 0.7;                
+            }
+            else
+            {
+                _beta = 0.65;                
+            }
+        }
+        public double incline;  // Уклон поверхности на трассе сети.
+        
+        public double betaCorrection1 //Корректировка коэффициента beta №1
+        { 
+            get 
+            {
+                
+                if(incline >=0.03)
+                {
+                    return 1.0;
+                }
+                else
+                {
+                    return 0.9;
+                }               
+            }
+            
+        }
+        int sectionsNumber; //Общее число участков на дождевом коллекторе или на участке притока сточных вод.
+        public double betaCorrection2 //Корректировка коэффициента beta №2
+        { 
+            get 
+            {
+                
+                if(sectionsNumber < 4)
+                {
+                    return 0.90;
+                }
+                else if(sectionsNumber < 10)
+                {
+                    return 0.85;
+                }    
+                else
+                {
+                    return 1;
+                }           
+            }
+            
+        }
+         
         double Q_cal; //method
         int Q_20; //table
         double P; //table
