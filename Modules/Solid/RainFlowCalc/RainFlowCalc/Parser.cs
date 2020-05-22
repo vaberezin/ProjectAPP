@@ -10,12 +10,12 @@ namespace RainFlowCalc
     public class Parser
     {
         static object locker = new object();
-        List<string> keys4Dict = new List<string>();
-        List<double> values4Dict = new List<double>();
-        public async void parseCSV(string filePath, Dictionary<string, double> dictionary)
+        static List<string> keys4Dict = new List<string>();
+        static List<double> values4Dict = new List<double>();
+        public static void parseCSV(string filePath, Dictionary<string, double> dictionary)
         {
-            lock (locker)
-            {
+            //lock (locker)
+            //{
                 string path = filePath;
             FileInfo parseFile = new FileInfo(path);
             if (parseFile.Extension == ".txt")
@@ -77,13 +77,14 @@ namespace RainFlowCalc
                 {
                     dictionary.Add(keys4Dict[i],values4Dict[i]);    
                 }
+                System.Console.WriteLine($"Запись значений в словарь {dictionary} завершена.");
 
             }
             else 
             {
                 System.Console.WriteLine("Метод не сработал.");
             }
-            }
+            //}
                         
         }          
         

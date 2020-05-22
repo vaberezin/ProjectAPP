@@ -8,18 +8,21 @@ namespace RainFlowCalc
     {
         static void Main(string[] args)
         {
-            //double d = 2;
-            //string s = "2";
+            //Инициализация словарей (пока нет базы, потом) в память программы из файлов *.txt 
+            //Пути к файлам с таблицами (сделаны из *.csv)
+            string path_n_PLess1 = @"..\Resources\DataTables\Table_n_PLess1.txt";
+            string path_n_PAbove1 = @"..\Resources\DataTables\Table_n_PAbove1.txt";
+            string path_m_r = @"..\Resources\DataTables\Table_m_r.txt";
+            string path_gamma = @"..\Resources\DataTables\Table_gamma.txt";
+            //Создание парсеров для каждого из файлов (всего словарей = количество объе- можно сделать чтобы каждый словарь создавался с названием как у файла и их количество было ) 
+            Parser.parseCSV(path_n_PLess1, Dictionaries.n_PLess1);
+            Parser.parseCSV(path_n_PAbove1, Dictionaries.n_PAbove1);
+            Parser.parseCSV(path_m_r, Dictionaries.m_r);
+            Parser.parseCSV(path_gamma, Dictionaries.gamma);
+            //Dictionary<string, double> testDict = new Dictionary<string, double>();
+            
 
-            //double sToDouble = Convert.ToDouble(s);
-            //Console.WriteLine(sToDouble);
-
-            string path = @"E:\CSharp\ProjectAPP\Unnecesary files\Tables\Table_gamma.txt";
-            Parser parser = new Parser();
-            Dictionary<string, double> testDict = new Dictionary<string, double>();
-            parser.parseCSV(path, testDict);
-
-            foreach (KeyValuePair<string, double> keyValuePair in testDict)
+            foreach (KeyValuePair<string, double> keyValuePair in Dictionaries.n_PLess1)
             {
                 Console.WriteLine($"{keyValuePair.Key} - {keyValuePair.Value}");
             }
