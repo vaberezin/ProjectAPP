@@ -4,8 +4,11 @@
     "\\Modules",
     "\\Modules\\Solid",
     "\\Modules\\Solid\\RainFlowCalc",
-    "\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc"
+    "\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc",
+    "\\Unnecesary files",
+    "\\Unnecesary files\\Tables",
+    "\\Unnecesary files\\Tables\\Tables for db"
   ],
-  "SelectedNode": "\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\Program.cs",
+  "SelectedNode": "\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\RainConstants.cs",
   "PreviewInSolutionExplorer": false
 }

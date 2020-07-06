@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\RainFlowCalc.csproj": {}
+    "E:\\CSharp\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\RainFlowCalc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\RainFlowCalc.csproj": {
+    "E:\\CSharp\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\RainFlowCalc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\RainFlowCalc.csproj",
+        "projectUniqueName": "E:\\CSharp\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\RainFlowCalc.csproj",
         "projectName": "RainFlowCalc",
-        "projectPath": "C:\\Users\\User\\Documents\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\RainFlowCalc.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\obj\\",
+        "projectPath": "E:\\CSharp\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\RainFlowCalc.csproj",
+        "packagesPath": "C:\\Users\\Prog\\.nuget\\packages\\",
+        "outputPath": "E:\\CSharp\\ProjectAPP\\Modules\\Solid\\RainFlowCalc\\RainFlowCalc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Prog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,6 +37,38 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
